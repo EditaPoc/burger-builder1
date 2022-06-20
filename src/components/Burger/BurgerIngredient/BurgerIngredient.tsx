@@ -5,7 +5,7 @@ interface Props {
     type: string;
 }
 
-const burgerIngredient = (props: Props) => {
+const burgerIngredient = (props: Props) => {  //vietoj any, jei naudoju interface, turetu buti Props
     let ingredient: JSX.Element | null = null;
         switch (props.type) {
             case ('bread-bottom'):
