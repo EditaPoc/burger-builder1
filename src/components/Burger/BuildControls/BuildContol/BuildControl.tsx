@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 import './BuildControl.css'
 
-const buildControl = (props: any) => (
-    <div className='BuildControl'>
-        <div className='Label'>{props.label}</div>
-        <button className='Less' onClick={props.removed} disabled={props.disabled}>Less</button>
-        <button className='More' onClick={props.added}>More</button>
+export interface Props {
+    children: React.ReactNode;
+    label: string;
+    added: MouseEventHandler;
+    removed:  MouseEventHandler;
+    disabled: boolean;
+    // key: string;
+  }
+
+const buildControl = (props: Props) => (
+    <div className="BuildControl">
+        <div className="Label">{props.label}</div>
+        <button className="Less" onClick={props.removed} disabled={props.disabled}>Less</button>
+        <button className="More" onClick={props.added}>More</button>
     </div>
 );
 

@@ -33,11 +33,6 @@ const burger = (props: Props) => {
     return (
         <div className="Burger">
           <BurgerIngredient type="bread-top" /> {transformedIngredients} 
-
-          <BurgerIngredient type="bacon" />
-          <BurgerIngredient type="cheese" />
-          <BurgerIngredient type="salad" />
-          <BurgerIngredient type="meat" />
           <BurgerIngredient type="bread-bottom" />
         </div>
     );
